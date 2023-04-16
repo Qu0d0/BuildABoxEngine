@@ -82,15 +82,10 @@ Components on and entity can also accessed via the entities GUID and vice versa.
   - ``game.camera->getComponent<CameraComponent>()``
   - You can set its data to follow a specific entity, for example.
 
-For examples on how to create your own systems and components, take a look at the larger example game provided.
-
-
 ### Now build your own game
 
 This should already cover everything you need to know to build a game with this engine.
-The first thing to do is to create a mesh that renders on screen. To do that, take a look at the PrefabManager.cpp in the example game.
 Make sure to initialize the mesh renderer and make sure that the camera looks at the object. After that, try to make your own system that moves the object on a button press.
-The file MainCCCSystem.h/.cpp has an example on how to do that.
 Have fun!
 
 
