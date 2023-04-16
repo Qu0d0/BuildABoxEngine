@@ -11,9 +11,6 @@
 *Thumbs.db
 ~$*.ppt*
 *.swp
-code/wp05/cmake-build-debug/
-code/wp05/cmake-build-debug
-code/wp05/cmake-build-release/
-code/wp05/cmake-build-release
+Engine/cmake-build-debug
 **/docs/out
-/code/wp05/cmake-build-debug/*
+
