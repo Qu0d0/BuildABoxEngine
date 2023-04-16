@@ -7,7 +7,6 @@
 #include <soloud.h>
 #include <soloud_wav.h>
 
-
 #include "engine/Context.h"
 #include "engine/Events.h"
 #include "engine/ecs/ComponentManager.h"
@@ -27,8 +26,6 @@ namespace gl3::engine {
         using event_t = events::Event<Game, Game&>;
 
         void run();
-        glm::mat4 calculateMvpMatrix(glm::vec3 position, float zRotationInDegrees, glm::vec3 scale);
-        glm::mat4 calculateMvpMatrixNew(glm::vec3 position, glm::mat4 rotationMatrix, glm::vec3 scale);
         GLFWwindow *getWindow() { return context.getWindow(); }
 
         event_t onStartup;
@@ -46,19 +43,21 @@ namespace gl3::engine {
 
         Entity *camera;
 
-        float getDeltaTime(){return deltaTime;}
+        [[nodiscard]] float getDeltaTime() const{return deltaTime;}
 
     protected:
         Game(int width, int height, const std::string &title);
+
         virtual void start() {}
         virtual void update(GLFWwindow *window) {}
         virtual void draw() {}
         virtual void drawUI() {}
         virtual ~Game();
 
-        SoLoud::Soloud audio;
         //Initial value
         float deltaTime = 1.0f / 60;
+
+        SoLoud::Soloud audio;
 
     private:
         void updateDeltaTime();

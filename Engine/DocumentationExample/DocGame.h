@@ -10,6 +10,7 @@ using gl3::engine::sceneGraph::Transform;
 class DocGame : public Game {
 
 public:
+
     DocGame(int width, int height, const std::string &title) : Game(width, height, title) {
     }
 

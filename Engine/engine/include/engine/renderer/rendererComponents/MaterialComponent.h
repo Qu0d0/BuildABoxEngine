@@ -45,10 +45,8 @@ private:
     std::filesystem::path texturePath;
     GLuint texture;
 
-    void doSomthing() {
-
+    void loadTexture() {
         //stbi_set_flip_vertically_on_load(true);
-
         //1 if value is in map 0 if not
         if(texturesDictionary.count(texturePath)){
 
@@ -73,7 +71,7 @@ private:
             std::cout << "Failed to load image" << std::endl;
         }
 
-        glGenTextures(1, &texture); //Deleate it in the end
+        glGenTextures(1, &texture);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -94,12 +92,12 @@ private:
 private:
     explicit MaterialComponent(guid_t owner, std::filesystem::path texturePath) : Component(owner) {
         this->texturePath = std::move(texturePath);
-        doSomthing();
+        loadTexture();
     }
 
     explicit MaterialComponent(guid_t owner, std::filesystem::path texturePath , bool hasAnAlphaTexture) : Component(owner) {
         this->texturePath = std::move(texturePath);
         hasAlphaTexture = hasAnAlphaTexture;
-        doSomthing();
+        loadTexture();
     }
 };

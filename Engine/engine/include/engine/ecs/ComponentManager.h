@@ -45,7 +45,6 @@ namespace gl3::engine::ecs {
 
         template<typename C>
         void forEachComponent(std::function<void(C&)> f) {
-                //auto a = containers.at(typeid(C).hash_code());
                 if(containers.count(typeid(C).hash_code())){
                     for(const auto &[_, component]: containers.at(typeid(C).hash_code())) {
                         f(*reinterpret_cast<C*>(component.get()));
@@ -63,7 +62,6 @@ namespace gl3::engine::ecs {
     private:
         void purgeComponents();
 
-        //Typedefs??
         std::map<size_t, ComponentContainer> containers;
         std::vector<std::pair<size_t, guid_t>> deleteList;
     };

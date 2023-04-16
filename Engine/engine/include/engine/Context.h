@@ -11,7 +11,6 @@ namespace gl3::engine::context {
 
         explicit Context(int width = 800, int height = 600, const std::string &title = "Game");
         virtual ~Context();
-        void run(const Callback& update, const Callback& drawUI);
         void run(const Callback& update);
 
         [[nodiscard]] GLFWwindow *getWindow() { return window; }

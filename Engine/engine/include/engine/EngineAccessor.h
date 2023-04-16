@@ -2,7 +2,6 @@
 // Created by Oddball on 25/11/2022.
 //
 #pragma once
-
 #include "engine/ecs/EntityManager.h"
 
 namespace gl3::engine{

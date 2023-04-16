@@ -3,7 +3,6 @@
 #include <list>
 #include <utility>
 
-
 namespace gl3::engine::events {
     template<typename Owner, typename ...Args>
     class Event {

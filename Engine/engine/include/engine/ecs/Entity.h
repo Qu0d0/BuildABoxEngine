@@ -12,7 +12,7 @@ namespace gl3::engine::ecs {
         [[nodiscard]] bool isDeleted() const { return deleted; }
 
         template<typename C, typename ...Args>
-        /* [[nodiscard]] */C &addComponent(Args ...args) {
+        C &addComponent(Args ...args) {
             return componentManager.addComponent<C>(id, args...);
         }
 

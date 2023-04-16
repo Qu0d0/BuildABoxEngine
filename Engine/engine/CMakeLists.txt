@@ -7,7 +7,6 @@ file(GLOB_RECURSE SOURCE_LIST CONFIGURE_DEPENDS "src/**.cpp")
 set(ENGINE_NAME Engine)
 
 add_library(${ENGINE_NAME} ${HEADER_LIST} ${PRIVATE_HEADER_LIST} ${SOURCE_LIST} include/engine/renderer/rendererComponents/CameraComponent.h src/renderer/stb.cpp src/renderer/stb.cpp include/engine/renderer/rendererComponents/MaterialComponent.h include/engine/EngineAccessor.h src/EngineAccessor.cpp src/renderer/MaterialComponent.cpp include/engine/audio/AudioComponent.h)
-#add_library(${ENGINE_NAME} ${HEADER_LIST} ${PRIVATE_HEADER_LIST} ${SOURCE_LIST} include/engine/renderer/rendererSystems/DrawMeshSystem.h include/engine/renderer/rendererComponents/MeshComponent.h include/engine/renderer/rendererComponents/ShaderComponent.h src/renderer/ShaderComponent.cpp src/renderer/MeshComponent.cpp)
 
 target_compile_features(${ENGINE_NAME} PRIVATE cxx_std_17)
 set_target_properties(${ENGINE_NAME} PROPERTIES LINKER_LANGUAGE CXX)
