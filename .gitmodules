@@ -1,0 +1,6 @@
+[submodule "wp05/extern/glm"]
+	path = code/wp05/extern/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "wp05/extern/glfw"]
+	path = code/wp05/extern/glfw
+	url = https://github.com/glfw/glfw.git

@@ -1,11 +1,19 @@
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
+# ============ #
+# OS generated #
+# ============ #
+
+*.DS_Store
+*.DS_Store?
+*._*
+*.Spotlight-V100
+*.Trashes
+*.ehthumbs.db
+*Thumbs.db
+~$*.ppt*
+*.swp
+code/wp05/cmake-build-debug/
+code/wp05/cmake-build-debug
+code/wp05/cmake-build-release/
+code/wp05/cmake-build-release
+**/docs/out
+/code/wp05/cmake-build-debug/*
