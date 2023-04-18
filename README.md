@@ -20,10 +20,9 @@ Before starting on your own project, there are a few folders that need to be exp
 First the asset folder. The asset loader will load assets only from this folder. This goes for 3d assets (.glb), textures, and sounds files.
 Second, there is the engine folder. It contains all the includes you need to access engine features.
 Then there is the extern folder, it contains external libraries like glf, glm or soloud. You can add your own libraries, but take a look at the CMake files if you do so.
-Then there are two example projects, the basic one is a minimal setup that provides you with an empty template, the other one is a full game build with the engine and can be used as a reference.
 ### How to build a game with the engine
 
-As already said, it is recommended that take a look at the 2 provided examples. If you start with the basic on in the DocumentationExample folder, you need to know the following:
+As already said, it is recommended that take a look at the provided example in the DocumentationExample folder.
 
 The game class provides you with a few functions that can be overridden. Those are:
 
@@ -87,9 +86,3 @@ Components on and entity can also accessed via the entities GUID and vice versa.
 This should already cover everything you need to know to build a game with this engine.
 Make sure to initialize the mesh renderer and make sure that the camera looks at the object. After that, try to make your own system that moves the object on a button press.
 Have fun!
-
-
-
-
-
-
