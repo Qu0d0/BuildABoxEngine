@@ -23,7 +23,7 @@ Then there is the extern folder, it contains external libraries like glf, glm or
 Then there are two example projects, the basic one is a minimal setup that provides you with an empty template, the other one is a full game build with the engine and can be used as a reference.
 ### How to build a game with the engine
 
-As already said, it is recommended that take a look at the 2 provided examples. If you start with the basic on in the DocumentationExample folder, you need to know the following:
+As already said, it is recommended that take a look at the provided example. If you start with the basic on in the DocumentationExample folder, you need to know the following:
 
 The game class provides you with a few functions that can be overridden. Those are:
 
@@ -35,7 +35,7 @@ drawUI()    // draws UI
 ```
 
 These are very useful for initializing game data and so on.
-However, the engine also provides you with an event system. You can subscribe to events in objects, which means you don't have to store objects in the game object and then call functions on them from there.
+However, the engine also provides you with an event system. You can subscribe to events, which means you don't have to call enities from the main game object.
 Instead, the following events are already provided:
 
         event_t onStartup
@@ -82,15 +82,12 @@ Components on and entity can also accessed via the entities GUID and vice versa.
   - ``game.camera->getComponent<CameraComponent>()``
   - You can set its data to follow a specific entity, for example.
 
-For examples on how to create your own systems and components, take a look at the larger example game provided.
 
 
-### Now build your own game
+### Build your own game
 
-This should already cover everything you need to know to build a game with this engine.
-The first thing to do is to create a mesh that renders on screen. To do that, take a look at the PrefabManager.cpp in the example game.
-Make sure to initialize the mesh renderer and make sure that the camera looks at the object. After that, try to make your own system that moves the object on a button press.
-The file MainCCCSystem.h/.cpp has an example on how to do that.
+You will find a simple example in the "DocumentationExample" folder. It will open a window and render a mesh that you can rotate with A and D.
+The first thing to do is to create a mesh that renders on screen. Make sure to initialize the mesh renderer and make sure that the camera looks at the object. After that, try to make your own system that moves the object on a button press. This should already cover most of what you need to know to build a game with this engine.
 Have fun!
 
 
