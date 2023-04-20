@@ -5,7 +5,7 @@
 #include "engine/Game.h"
 #define GLM_ENABLE_EXPERIMENTAL
 #include "glm/gtx/hash.hpp"
-#include "../GameComponents/InputTargetComponet.h"
+#include "../GameComponents/RotatorComponet.h"
 
 using gl3::engine::ecs::System;
 using gl3::engine::Game;
@@ -23,5 +23,5 @@ public:
 
 private:
     void processInput(Game &game);
-    void RoateEntityOnY(Game &game, InputTargetComponent &inputTarget, float speed);
+    void RoateEntityOnY(Game &game, Transform &transform, float speed);
 };

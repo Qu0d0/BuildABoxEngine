@@ -1,6 +1,3 @@
-//
-// Created by Oddball on 27/10/2022.
-//
 #pragma once
 #include "engine/ecs/Component.h"
 #include <string>

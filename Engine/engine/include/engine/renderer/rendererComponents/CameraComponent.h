@@ -1,6 +1,3 @@
-//
-// Created by Oddball on 10/11/2022.
-//
 #pragma once
 #include "glm/mat4x4.hpp"
 #include "engine/ecs/Component.h"

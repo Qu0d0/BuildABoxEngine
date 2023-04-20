@@ -1,6 +1,3 @@
-//
-// Created by Oddball on 30/10/2022.
-//
 #pragma once
 #include <iostream>
 #include "glad/glad.h"

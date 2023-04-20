@@ -1,6 +1,3 @@
-//
-// Created by Oddball on 17/11/2022.
-//
 #pragma once
 #include <filesystem>
 #include <utility>

@@ -1,12 +1,8 @@
-//
-// Created by Oddball on 30/10/2022.
-//
 #include <glm/gtc/type_ptr.hpp>
 #include <fstream>
 #include <sstream>
 #include "engine/assetLoader/Assets.h"
 #include "engine/renderer/rendererComponents/ShaderComponent.h"
-
 
 unsigned int ShaderComponent::s_fragmentShader = 0;
 unsigned int ShaderComponent::s_vertexShader = 0;
@@ -16,7 +12,6 @@ struct glStatusData {
     const char *shaderName;
     char infoLog[GL_INFO_LOG_LENGTH];
 };
-
 
 unsigned int ShaderComponent::loadAndCompileShader(GLuint shaderType, const fs::path &shaderPath) {
     auto shaderSource = readText(shaderPath);

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 
-set(SOURCE_FILES DocGame.h DocGame.cpp main.cpp GameSystems/ObjectRotatorSystem.h GameSystems/ObjectRotatorSystem.cpp GameComponents/InputTargetComponet.h)
+set(SOURCE_FILES ExampleGame.h ExampleGame.cpp main.cpp gameSystems/ObjectRotatorSystem.h gameSystems/ObjectRotatorSystem.cpp gameComponents/RotatorComponet.h)
 
 set(EXE_FILE DocGame)
 

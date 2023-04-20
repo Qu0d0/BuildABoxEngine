@@ -12,5 +12,5 @@ add_subdirectory(extern/imgui)
 
 add_subdirectory(engine)
 #add_subdirectory(WackLumberjack)
-add_subdirectory(DocumentationExample)
+add_subdirectory(exampleGame)
 #add_subdirectory(WackLumberjack/src/Scripts)

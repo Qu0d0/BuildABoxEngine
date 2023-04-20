@@ -1,6 +1,3 @@
-//
-// Created by Oddball on 26/01/2023.
-//
 #pragma once
 #include "engine/ecs/Component.h"
 #include "engine/assetLoader/Assets.h"

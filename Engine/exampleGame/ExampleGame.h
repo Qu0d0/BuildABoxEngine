@@ -7,11 +7,11 @@ using gl3::engine::Game;
 using gl3::engine::ecs::Entity;
 using gl3::engine::sceneGraph::Transform;
 
-class DocGame : public Game {
+class ExampleGame : public Game {
 
 public:
 
-    DocGame(int width, int height, const std::string &title) : Game(width, height, title) {
+    ExampleGame(int width, int height, const std::string &title) : Game(width, height, title) {
     }
 
 private:

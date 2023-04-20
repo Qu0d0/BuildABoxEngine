@@ -6,19 +6,19 @@ void DrawMeshSystem::drawMesh(Game &game) {
     game.componentManager.forEachComponent<MeshComponent>([&](MeshComponent &meshComponent) {
 
         Entity &entity = game.entityManager.getEntity(meshComponent.entity());
-        Transform &meshComponentTransform = entity.getComponent<Transform>();
-        glm::vec3 position = meshComponentTransform.getWorldPosition();
+        Transform &transform = entity.getComponent<Transform>();
+        glm::vec3 position = transform.getWorldPosition();
 
         auto mvpMatrix = calculateMvpMatrix(game.camera,
                                             position,
-                                            meshComponentTransform.getWorldRotationMatrix(),
-                                            meshComponentTransform.getWorldScale());
+                                            transform.getWorldRotationMatrix(),
+                                            transform.getWorldScale());
 
 
         ShaderComponent &shaderComponent = entity.getComponent<ShaderComponent>();
         shaderComponent.use();
         shaderComponent.setMatrix("mvp", mvpMatrix);
-        shaderComponent.setMatrix("modelToWorldNormal", calculateModelToWorldNormal(meshComponentTransform));
+        shaderComponent.setMatrix("modelToWorldNormal", calculateModelToWorldNormal(transform));
         shaderComponent.setVector("color", {1, 1, 1, 1});
 
         //texture

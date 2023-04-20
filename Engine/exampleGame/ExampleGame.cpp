@@ -1,11 +1,11 @@
-#include "DocGame.h"
+#include "ExampleGame.h"
 #include "engine/renderer/rendererComponents/MeshComponent.h"
 #include "engine/renderer/rendererComponents/ShaderComponent.h"
 #include "engine/renderer/rendererComponents/MaterialComponent.h"
 #include "engine/renderer/rendererComponents/CameraComponent.h"
-#include "GameComponents/InputTargetComponet.h"
+#include "GameComponents/RotatorComponet.h"
 
-void DocGame::start() {
+void ExampleGame::start() {
     Transform &gameObjectTransform = entityManager.createEntity().addComponent<Transform>(origin,
                                                                                                glm::vec3(0, -1.0f, 0),
                                                                                                glm::vec3(-90.0f, 0.0f, 0),
@@ -14,7 +14,7 @@ void DocGame::start() {
     gameObject.addComponent<MeshComponent>("gltf/hog.glb");
     gameObject.addComponent<ShaderComponent>("shaders/shaded/vertexShaderTextured.vert", "shaders/shaded/fragmentShaderTextured.frag");
     gameObject.addComponent<MaterialComponent>("textures/hog.png", true);
-    gameObject.addComponent<InputTargetComponent>();
+    gameObject.addComponent<RotatorComponent>(35.f);
 
 
     camera->getComponent<CameraComponent>().eye = {0.0f, 1.0f,6.0f};
@@ -23,7 +23,7 @@ void DocGame::start() {
     initSystems();
 }
 
-void DocGame::initSystems() {
+void ExampleGame::initSystems() {
     objectRotatorSystem = std::make_unique<ObjectRotatorSystem>(*this);
     drawMeshSystem = std::make_unique<DrawMeshSystem>(*this);
 }
